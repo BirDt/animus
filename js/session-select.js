@@ -1,5 +1,5 @@
-const sessionsWrapper = document.querySelector('#session-items-wrapper');
-const sessions = document.querySelectorAll('.session');
+let sessionsWrapper = document.querySelector('#session-items-wrapper');
+let sessions = document.querySelectorAll('.session');
 let currentSession = 0;
 let isAnimatingSession = false;
 
@@ -34,4 +34,9 @@ function populateSessions() {
 	newSession.textContent = s.name;
 	usersWrapper.appendChild(newSession);
     });
+
+    sessionsWrapper = document.querySelector('#session-items-wrapper');
+    sessions = document.querySelectorAll('.session');
+    currentSession = 0;
+    isAnimatingSession = false;
 }

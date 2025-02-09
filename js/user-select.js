@@ -1,5 +1,5 @@
-const usersWrapper = document.querySelector('#user-items-wrapper');
-const users = document.querySelectorAll('.user');
+let usersWrapper = document.querySelector('#user-items-wrapper');
+let users = document.querySelectorAll('.user');
 let currentUser = 0;
 let isAnimatingUsers = false;
 
@@ -34,4 +34,9 @@ function populateUsers() {
 	newUser.textContent = u.display_name;
 	usersWrapper.appendChild(newUser);
     });
+
+    usersWrapper = document.querySelector('#user-items-wrapper');
+    users = document.querySelectorAll('.user');
+    currentUser = 0;
+    isAnimatingUsers = false;
 }
