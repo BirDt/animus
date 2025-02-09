@@ -1,5 +1,5 @@
 const sessionsWrapper = document.querySelector('#session-items-wrapper');
-const sessions = document.querySelectorAll('#session');
+const sessions = document.querySelectorAll('.session');
 let currentSession = 0;
 let isAnimatingSession = false;
 
