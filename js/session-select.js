@@ -27,14 +27,15 @@ function cycleSession(direction) {
 function populateSessions() {
     let sessionObjects = lightdm.sessions;
     sessionsWrapper.innerHTML = "";
+    
     sessionObjects.forEach((s) => {
 	let newSession = document.createElement("div");
 	newSession.id = s.key;
 	newSession.className = "item session";
 	newSession.textContent = s.name;
-	usersWrapper.appendChild(newSession);
+	sessionsWrapper.appendChild(newSession);
     });
-
+    
     sessionsWrapper = document.querySelector('#session-items-wrapper');
     sessions = document.querySelectorAll('.session');
     currentSession = 0;
