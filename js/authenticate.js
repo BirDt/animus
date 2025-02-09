@@ -2,7 +2,6 @@ function authenticate(){
     const selectedUser = users[currentUser].id;
     console.log(selectedUser);
 
-    lightdm.cancel_authentication();
     lightdm.authenticate(selectedUser);
 }
 
