@@ -6,6 +6,8 @@ async function initGreeter(){
     connectPowerActions();
     populateSessions();
     populateUsers();
+
+    console.log(lightdm.default_session);
 }
 
 window.addEventListener("GreeterReady", () => {
