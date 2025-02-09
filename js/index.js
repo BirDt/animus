@@ -4,6 +4,8 @@ async function initGreeter(){
     }
     setHostname();
     connectPowerActions();
+    populateSessions();
+    populateUsers();
 }
 
 window.addEventListener("GreeterReady", () => {
