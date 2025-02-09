@@ -32,6 +32,36 @@
         <div id="hostname-label" class="label raised-text-small">citadel</div>
     </div>
 
+    <div id="login-form-container" class="bottom-middle bottom-bleed-extra hideable hidden">
+      <div class="dial-container">
+	<div class="arrow" onclick="cycleSession(-1)">◀</div>
+	<div class="items-container">
+          <div id="session-items-wrapper" class="items-wrapper">
+            <div class="item session">bspwm</div>
+	    <div class="item session">awesome</div>
+	    <div class="item session">sway</div>
+	    <div class="item session">i3</div>
+          </div>
+	</div>
+	<div class="arrow" onclick="cycleSession(1)">▶</div>
+      </div>
+
+      <div class="dial-container">
+	<div class="arrow" onclick="cycleUser(-1)">◀</div>
+	<div class="items-container">
+          <div id="user-items-wrapper" class="items-wrapper">
+            <div class="item user">User 1</div>
+	    <div class="item user">User 2</div>
+          </div>
+	</div>
+	<div class="arrow" onclick="cycleUser(1)">▶</div>
+      </div>
+      
+      <div class="input-container">
+	<input placeholder="" type="password" tabindex="1" />
+      </div>
+    </div>
+
     <div id="host-info-container" class="bottom-right bottom-bleed right-bleed hideable hidden">
         <div id="battery-icon"></div>
     </div>
@@ -41,6 +71,8 @@
     <script src="js/theme.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/power-actions.js"></script>
+    <script src="js/user-select.js"></script>
+    <script src="js/session-select.js"></script>
     <script src="js/idle-hide.js"></script>
     <script src="js/hostname.js"></script>
     <script src="js/index.js"></script>
