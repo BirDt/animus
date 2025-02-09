@@ -1,28 +1,24 @@
-function authenticate(){
-    const selectedUser = users[currentUser].id;
-    console.log(selectedUser);
-
-    lightdm.authenticate(selectedUser);
-}
-
-async function authenticationComplete() {
-    const selectedSession = sessions[currentSession].id;
-    console.log(selectedSession);
-    
-    await lightdm.respond($("#password-input").value);
-    console.log("Response positive");
-    lightdm.start_session(selectedSession);
-}
-
 function bindAuthenticate() {
     $("#password-input").onkeypress = function(e) {
-	console.log("Submitting");
+	console.log("Asking for authentication");
 	var keycode = e.code || e.key;
 	if(keycode == "Enter"){
-	    authenticate();
+	    const selectedUser = users[currentUser].id;
+	    console.log(`Authenticating ${selectedUser}`);
+
+	    lightdm.authenticate(selectedUser);
 	    return;
 	}
     }
 
-    lightdm.authentication_complete.connect(authenticationComplete);
+    lightdm.show_prompt.connect((text, type) => {
+	console.log(`Responding with ${$("#password-input").value}`);
+	lightdm.respond($("#password-input").value)
+    });
+    
+    lightdm.authentication_complete.connect(() {
+	const selectedSession = sessions[currentSession].id;
+	console.log(`Starting session ${selectedSession}`)
+	lightdm.start_session(selectedSession);
+    });
 }
