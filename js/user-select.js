@@ -26,7 +26,7 @@ function cycleUser(direction) {
 
 function populateUsers() {
     let userObjects = lightdm.users;
-    usersWrapper.innerHtml = "";
+    usersWrapper.innerHTML = "";
     userObjects.forEach((u) => {
 	let newUser = document.createElement("div");
 	newUser.id = u.username;

@@ -26,7 +26,7 @@ function cycleSession(direction) {
 
 function populateSessions() {
     let sessionObjects = lightdm.sessions;
-    sessionsWrapper.innerHtml = "";
+    sessionsWrapper.innerHTML = "";
     sessionObjects.forEach((s) => {
 	let newSession = document.createElement("div");
 	newSession.id = s.key;
