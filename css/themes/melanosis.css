@@ -1,0 +1,33 @@
+:root {
+    --surface: #0B1012;
+    --surface-secondary: #37484D;
+
+    --on-surface: #F3F5FF;
+    --on-surface-dim: #9AB5B3;
+
+    --primary: #788BFF;
+    --primary-bright: #AEB9FF;
+    --primary-dim: #6F77AC;
+
+    --secondary: #BBA0CA;
+    --secondary-bright: #E0C0F1;
+    --secondary-dim: #9A7AAB;
+
+    --tertiary: #B4EDB4;
+    --tertiary-bright: #D5FFD5;
+    --tertiary-dim: #91CD91;
+
+    --background: url("../../assets/backgrounds/mountain.jpg");
+
+    --tl-shadow-primary-concave: 9px 9px 18px #040607;
+    --br-shadow-primary-concave: -9px -9px 18px #121a1d; 
+
+    --tl-shadow-primary-convex: inset 9px 9px 18px #040607;
+    --br-shadow-primary-convex: inset -9px -9px 18px #121a1d;
+
+    --tl-shadow-secondary-concave: 2px 2px 10px #040607;
+    --br-shadow-secondary-concave: -2px -2px 10px #121a1d; 
+
+    --tl-shadow-tertiary-concave: 0px 0px 1px #839a98;
+    --br-shadow-tertiary-concave: -0px -0px 1px #b1d0ce; 
+}

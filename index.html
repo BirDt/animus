@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimuim-scale=1.0, maximum-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <link id="theme-stylesheet" rel="stylesheet" type="text/css" href="css/themes/melanosis.css"/>
+    <!--Main Document Styles-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+    <title>Animus Greeter</title>
+    
+</head>
+<body>
+    <div class="silhouette hideable hidden"></div>
+
+    <div id="clock-box" class="top-middle center-text top-bleed-extra">
+        <div id="time-label" class="title raised-text">00:00</div>
+        <div id="date-label" class="subtitle raised-text">Monday 1, January 1970</div>
+    </div>
+
+    <div id="setting-action-container" class="top-left center-text top-bleed left-bleed hideable hidden border-primary">
+        <button class="action-btn"><img src="assets/svg/settings.svg"/></button>
+    </div>
+
+    <div id="power-action-container" class="top-right center-text top-bleed right-bleed hideable hidden">
+        <button id="poweroff-button" class="action-btn"><img src="assets/svg/shutdown.svg"/></button>
+        <button id="restart-button" class="action-btn"><img src="assets/svg/reboot.svg"/></button>
+    </div>
+
+    <div id="hostname-container" class="bottom-left bottom-bleed left-bleed hideable hidden">
+        <div id="hostname-label" class="label raised-text-small">citadel</div>
+    </div>
+
+    <div id="host-info-container" class="bottom-right bottom-bleed right-bleed hideable hidden">
+        <div id="battery-icon"></div>
+    </div>
+
+    <script src="js/class/util.js"></script>
+    <script src="js/class/data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/power-actions.js"></script>
+    <script src="js/idle-hide.js"></script>
+    <script src="js/hostname.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
