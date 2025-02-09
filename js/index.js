@@ -7,7 +7,7 @@ async function initGreeter(){
     populateSessions();
     populateUsers();
 
-    console.log(lightdm.default_session);
+    bindAuthenticate();
 }
 
 window.addEventListener("GreeterReady", () => {
