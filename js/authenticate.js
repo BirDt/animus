@@ -24,5 +24,5 @@ function bindAuthenticate() {
 	}
     }
 
-    window.lightdm.authentication_complete.connect(authenticationComplete);
+    lightdm.authentication_complete.connect(authenticationComplete);
 }
